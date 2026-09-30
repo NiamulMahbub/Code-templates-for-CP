@@ -2,6 +2,7 @@
 using namespace std;
 
 typedef long long ll;
+typedef unsigned int ui;
 typedef unsigned long long ull;
 typedef __int128 lll;
 typedef vector<int> vi;
