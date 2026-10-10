@@ -1,6 +1,4 @@
 // call C(n,r) to calculate (nCr)%M and run pre() in the beginning of main
-
-const ll M = 1e9+7;
 const ll N = 2e5+7;
 
 ll power(ll a, ll p) 
@@ -34,4 +32,11 @@ ll C(ll n, ll r)
     ll denom = (invfac[r]*invfac[n-r])%M;
 
     return (fac[n]*denom)%M;
+}
+
+ll P(ll n, ll r) 
+{
+    if (r<0 || r>n) return 0;
+
+    return (fac[n]*invfac[n-r])%M;
 }
