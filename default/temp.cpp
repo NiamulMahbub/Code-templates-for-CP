@@ -18,7 +18,7 @@ typedef vector<pll> vpll;
 #define fi first
 #define se second
 
-const ll MOD = 1e9+7;
+const ll M = 1e9+7;
 
 int main()
 {
