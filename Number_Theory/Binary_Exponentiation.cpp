@@ -1,15 +1,16 @@
-ll M=1e9+7;
-
-ll binexp(ll base, ll exp)
+ll binexp(ll a, ll b) 
 {
-    if(exp==1) return base%M;
-    if(exp==0) return 1;
-    if(exp%2)
+    ll r = 1;
+    while (b) 
     {
-        return ((binexp(base, 1)%M)*(binexp(base, exp-1)%M))%M;
+        if (b & 1) 
+        {
+            r *= a;
+            r %= M;
+        }
+        a *= a;
+        a %= M;
+        b /= 2;
     }
-    else
-    {
-        return ((binexp(base, exp/2)%M)*(binexp(base, exp/2)%M))%M;
-    }
+    return r;
 }
