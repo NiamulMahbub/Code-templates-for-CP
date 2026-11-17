@@ -25,10 +25,17 @@ typedef tree< int, null_type, less<int>, rb_tree_tag, tree_order_statistics_node
 
 const ll M = 1e9+7;
 
+void pre()
+{
+    
+}
+
 int main()
 {
     ios::sync_with_stdio(0);
     cin.tie(0);
+
+    pre();
 
     int t; cin >> t;
     while (t--)
